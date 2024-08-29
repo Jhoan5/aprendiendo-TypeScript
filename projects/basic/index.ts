@@ -217,3 +217,27 @@ type C = A & B;
 function add77(a: C) {
   return a.a + a.b;
 }
+
+// Class
+class exampleClass{
+  private readonly secretKey = '123456'
+  protected readonly secretKey2 = '123456'
+  public msg = 'message'
+  public publicSecretKey = this.secretKey;
+  get message() {
+    return this.msg
+  }
+  set message(msg: string){
+    this.message = msg
+  }
+  constructor(public name?: string) {
+  this.name = name
+  }
+  static Greet(){
+    console.log("Hello");
+  }
+  Greet2(): void{
+    console.log("Hello2");
+
+  }
+}
